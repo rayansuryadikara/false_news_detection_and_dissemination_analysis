@@ -1,0 +1,37 @@
+Annotation Guideline
+
+The data set consists of columns:
+• Topic: The news subjects which have supporting URL from fact-checking sites.
+• Supporting URL: The URLs from fact-checking websites which tracks the truth of a topic and related matters.
+• Tweet: Posts on Twitter that relate with the topic and are verified via a supporting URL.
+• True (Class): Tweets that relate to the topic and are true or accurate according to the supporting URL.
+• False (Class): Tweets that relate to the topic and are false or inaccurate according to the supporting URL.
+• Misleading (Class): Tweets that relate to the topic and have accurate information according to the supporting URL but lead to wrong conclusions. 
+• Other (Class): Tweets that do not relate to the topic or are not discussed in the supporting URL.
+
+Each tweet is complemented by its topic and supporting URL. The topic is extracted from supporting URL and becomes a query to extract the tweets in the span of the first time the topic spreads on social media up to the seventh day. The supporting URLs are from Cek Fakta Tempo from Tempo and Turn Back Hoax from Mafindo.
+
+Before examining the tweets, each annotator is advised to read the supporting URLs first to understand the trace of the facts. Supporting URLs are the only place for annotators to verify the tweet, so there is no need to manually look for other supporting evidence.
+Each annotator checks whether the tweet is a statement or claim mentioned in the exposition of supporting URL. What needs to be checked is only claims or statements that are related to the topic, so if there is a tweet contains several other claims that are not related to the topic, then these claims does not need to be checked. 
+
+Example:
+The topic "European Ambassadors Support Prabowo" comes from a supporting URL with link Is it true that the 23 EU Ambassadors Support Prabowo - Sandi? and was proven to be false.
+
+Summary of fact-finding from the site:
+The twenty-three EU ambassadors visited Prabowo-Sandi Campaign Team headquarters to discuss tax reform issues and openness for business and investment, social welfare issues and the polemic of permanent voter list issued by the Election Commissioner. Afterwards, the EU ambassadors also visited Jokowi-Ma'ruf Campaign Team headquarters to discuss the European Union's partnership with Indonesia. It is clearly stated that there was no discussion of support for candidate Prabowo-Sandi during the visit.
+
+Some examples of the extracted tweets based on the topic (the tweets were all Indonesian and already translated to English):
+• Tweet: "Prabowo has never sought support from the European ambassadors"
+The main statement relates to the topic and states refutation that Prabowo is seeking support from the European ambassadors. According to the conclusion of the supporting URL, there is no dialogue of support for candidate pairs 02, so this tweet belongs in True class.
+• Tweet: "The ambassadors have supported Prabowo by asked him to declare his vision and missions!"
+The main statement relates to the topic and states that the ambassadors have supported Prabowo and asked him to declare his vision and missions. According to the conclusion of the supporting URL, there is no support declaration from the ambassadors, only dialogue on tax and business matters, so this tweet belongs in the False class.
+• Tweet: "The EU ambassador instead came to Prabowo's headquarters, what else if it were not to give moral support to the campaign!"
+The main statement relates to the topic and states that the EU ambassadors came to Prabowo's headquarters to provide support. According to the conclusion of the supporting URL, the visit of the EU ambassador is factual, but it misled with the wrong conclusion because it has been explained and refuted that there is no campaign support, so this tweet belongs in Misleading class.
+• Tweet: "Prabowo was appointed as Indonesian ambassador to the Netherlands in the meeting of the European Union Ambassador."
+The main statement does not relate to the topic or is not addressed in the supporting URL so this tweet belongs in Other class.
+• Tweet: “Prabowo has received a visit from the Saudi Ambassador https://news.detik.com/berita/d-4781593/usai-bertemu-dubes-as-prabowo-terima-kunjungan-dubes-saudi."
+Although the tweet includes a link that could give grounds for the statement, it can not be used as a guideline because the only valid link to check the veracity is simply the supporting URL and already supplemented for the annotators. In this case, the statement does not even relate to the topic or is not addressed in the supporting URL, so this tweet belongs in Other class.
+• Tweet: “Yesterday Prabowo was able to gain support from the ambassadors, Europe has begun to target domestic assets, China and America also will not remain silent.”
+The statement that relates to the topic is Prabowo gained support from the ambassador, which is proven wrong, so this tweet belongs in False class. Other statements, such as Europe began targeting domestic assets or Chinese and Americans do not need to be checked because they are independent statements that do not relate to the topic.
+• Tweet: “[FALSE] EU Ambassador supports Prabowo Campaign”
+The statement relates with the topic and confirms the rumour that EU ambassadors support Prabowo's campaign is false according to the supporting URL, so this tweet belongs in True class.
